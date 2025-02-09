@@ -18,7 +18,7 @@ csrf = CSRFProtect()
 #migrate = Migrate()
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, template_folder="encryption_app/templates", static_folder="encryption_app/static")
     app.config.from_object(Config)
     Session(app)
 
