@@ -15,7 +15,7 @@ from encryption_app.email_helpers import verification_email, send_reset_email, g
 from sqlalchemy.sql import func
 
 
-auth = Blueprint('auth', __name__)
+auth = Blueprint('auth', __name__, template_folder='templates')
 
 POTP_SECRET_KEY = pyotp.random_base32()
 
